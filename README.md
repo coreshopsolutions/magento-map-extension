@@ -1,1 +1,1 @@
-"# magento-map-extension" 
+# Magento Automatic PIM
