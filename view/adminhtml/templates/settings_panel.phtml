@@ -1,0 +1,54 @@
+<?php
+// @codingStandardsIgnoreFile
+?>
+<form method="get" action="<?php echo $this->getUrl('pimcoreconnector/settings'); ?>">
+    <input type="hidden" name="form_key" value="<?= $this->getFormKey() ?>">
+    <div class="page-main-actions">
+        <div class="page-actions-placeholder"></div>
+        <div class="page-actions">
+            <div class="page-actions-inner">
+                <div class="page-actions-buttons">
+                    <button name="download_connector" id="download_connector" type="button" class="action-default scalable" onclick="window.open('https://coreshopsolutions.com/mme','_blank')">
+                        <span>Download Connector</span>
+                    </button>
+                    <button name="connector_support" id="connector_support" title="Support" type="button" class="action-default scalable" onclick="window.open('https://licenses.coreshopsolutions.com/support.php', '_blank')">
+                        <span>Support</span>
+                    </button>
+                    <button id="save" title="Save Settings" type="submit" class="action-default scalable save primary">
+                        <span>Save Config</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <p>The <a href="https://coreshopsolutions.com/mme" target="_blank">Magento Automatic PIM</a>, helps you synchronize the data between the two platforms. Through this form, you can enable or disable the status of the Magento extension and specify the URL of your PIM installation.</p>
+    </div>
+
+    <table class="data-grid">
+        <thead>
+            <tr>
+                <th class="data-grid-th">Setting Name</th>
+                <th class="data-grid-th">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="even">
+                <td class="">Status</td>
+                <td class="">
+                    <select name="enable" class="input-select admin__control-select no-changes">
+                        <option value="1" <?= ($this->getSetting('enable')==='1')?'selected':'' ?>>Enabled</option>
+                        <option value="0" <?= ($this->getSetting('enable')==='0')?'selected':'' ?>>Disabled</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="background-color: grey">
+                <td class="">Pimcore Base URL</td>
+                <td class="">
+                    <input name="pimcore_url" class="input-text admin__control-text no-changes" style="width: 100%" type="url" value="<?= $this->getSetting('pimcore_url') ?>">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

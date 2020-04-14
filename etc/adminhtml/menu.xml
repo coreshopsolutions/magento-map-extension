@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add id="CoreshopSolutions_PimcoreConnector::settings" title="PIM Connector" translate="title" module="CoreshopSolutions_PimcoreConnector" parent="Magento_Backend::system" sortOrder="50" dependsOnModule="CoreshopSolutions_PimcoreConnector" resource="CoreshopSolutions_PimcoreConnector::settings"/>
+      <add id="CoreshopSolutions_PimcoreConnector::settings_panel" title="Configuration" translate="title" module="CoreshopSolutions_PimcoreConnector" parent="CoreshopSolutions_PimcoreConnector::settings" sortOrder="10" dependsOnModule="CoreshopSolutions_PimcoreConnector" action="pimcoreconnector/settings" resource="CoreshopSolutions_PimcoreConnector::settings"/>
+    </menu>
+</config>

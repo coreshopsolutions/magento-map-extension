@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/coreshopsolutions/attribute/:attributeId" method="GET">
+        <service class="CoreshopSolutions\PimcoreConnector\Model\Api\Service" method="getAttributeSets"/>
+        <resources>
+            <resource ref="CoreshopSolutions_PimcoreConnector::attributeSets"/>
+        </resources>
+    </route>
+</routes>
